@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+}
+
+group 'hu.perit'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    set('spvitaminVersion', '3.0.4-3-RELEASE')
+}
+
+dependencies {
+    // Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.26'
+    testCompileOnly 'org.projectlombok:lombok:1.18.26'
+    annotationProcessor 'org.projectlombok:lombok:1.18.26'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.26'
+
+    //implementation "hu.perit.spvitamin:spvitamin-core:${spvitaminVersion}"
+    implementation project(':spvitamin-core')
+
+
+    // Slf4J
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
+
+    implementation 'com.google.guava:guava:32.0.0-jre'
+
+    testImplementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.10'
+    testImplementation group: 'ch.qos.logback', name: 'logback-core', version: '1.2.10'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3'
+    testImplementation 'com.google.guava:guava:31.1-jre'
+    testImplementation 'org.assertj:assertj-core:3.24.2'
+
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.3'
+}
+
+test {
+    useJUnitPlatform()
+}
