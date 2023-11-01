@@ -10,7 +10,7 @@ repositories {
 }
 
 ext {
-    set('spvitaminVersion', '3.0.4-3-RELEASE')
+    set('spvitaminVersion', '3.0.4-4-RELEASE')
 }
 
 dependencies {
@@ -20,8 +20,8 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.26'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.26'
 
-    //implementation "hu.perit.spvitamin:spvitamin-core:${spvitaminVersion}"
-    implementation project(':spvitamin-core')
+    implementation "hu.perit.spvitamin:spvitamin-core:${spvitaminVersion}"
+    //implementation project(':spvitamin-core')
 
 
     // Slf4J
