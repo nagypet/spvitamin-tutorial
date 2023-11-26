@@ -20,9 +20,14 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.26'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.26'
 
-    implementation "hu.perit.spvitamin:spvitamin-core:${spvitaminVersion}"
-    //implementation project(':spvitamin-core')
+    implementation project(':spvitamin-core')
+    implementation project(':spvitamin-json-time')
+    //implementation "hu.perit.spvitamin:spvitamin-core:${spvitaminVersion}"
 
+    // FasterXML
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.15.3'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.3'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.15.3'
 
     // Slf4J
     implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.30'
