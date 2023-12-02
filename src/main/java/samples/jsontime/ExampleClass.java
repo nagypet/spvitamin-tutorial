@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
@@ -23,7 +24,8 @@ public class ExampleClass
         OFFSET_DATE_TIME("offsetDateTime"),
         LOCAL_DATE("localDate"),
         DATE("date"),
-        ZONED_DATE_TIME("zonedDateTime");
+        ZONED_DATE_TIME("zonedDateTime"),
+        INSTANT("instant");
 
         private final String fieldName;
 
@@ -39,6 +41,7 @@ public class ExampleClass
     private LocalDate localDate;
     private Date date;
     private ZonedDateTime zonedDateTime;
+    private Instant instant;
 
 
     @Override
@@ -73,6 +76,7 @@ public class ExampleClass
             case LOCAL_DATE -> localDate.toString();
             case DATE -> formatDate(date);
             case ZONED_DATE_TIME -> zonedDateTime.toString();
+            case INSTANT -> instant.toString();
         };
     }
 }

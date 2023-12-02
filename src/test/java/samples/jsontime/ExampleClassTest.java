@@ -50,8 +50,11 @@ class ExampleClassTest
         testDeserialization("2023-11-26 23:53:10.123-0200");
         testDeserialization("2023-11-26T09:53");
         testDeserialization("2023-11-26T09:53:10.123");
+        testDeserialization("2023-11-26T09:53:10.123456");
+        testDeserialization("2023-11-26T09:53:10.123456789");
         testDeserialization("2023-11-26T09:53:10.123+0200");
         testDeserialization("2023-11-26T09:53:10.123+0400");
+        testDeserialization("2023-11-26T09:53:10.123Z");
     }
 
 
